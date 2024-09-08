@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
 import {TaskDto} from "../dto/task-dto";
-import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
   private tasks: TaskDto[] = [];
-
-  private httpClient: HttpClient;
 
   // Method to get all tasks
   getTasks() {

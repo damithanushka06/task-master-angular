@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {NgForOf} from "@angular/common";
@@ -12,7 +12,7 @@ import {TaskDto} from "../dto/task-dto";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   taskTitle: string = '';
   taskDescription: string = '';
   tasks: TaskDto[] = [];
